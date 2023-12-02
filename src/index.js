@@ -103,6 +103,10 @@ io.on('connection', (socket) => {
   });
 });
 
+app.get('/chat', (req, res) => {
+  res.sendFile(path.join(publicDirectoryPath, 'chat.html'));
+});
+
 server.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
